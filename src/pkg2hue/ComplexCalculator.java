@@ -14,24 +14,26 @@ public class ComplexCalculator extends AbstractCalculator {
         super(add, substract, multiply, divide);
     }
 
+    double i = Math.sqrt(-1);
+
     @Override
     public Number add(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return add.calc(a, b);
     }
 
     @Override
     public Number substract(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return substract.calc(a, b);
     }
 
     @Override
     public Number multiply(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return multiply.calc(a, b);
     }
 
     @Override
     public Number divide(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return divide.calc(a, b);
     }
 
 }
