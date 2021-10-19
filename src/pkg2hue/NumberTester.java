@@ -93,6 +93,33 @@ public class NumberTester implements NumberTest {
                 int zahlzumtesten = Integer.parseInt(arr[1]);
 
                 switch (wassollgetestetwerden) {
+                    case 1:
+                        boolean b = oddTester.testNumber(zahlzumtesten);
+                        if (b == true) {
+                            System.out.println("EVEN");
+                        } else {
+                            System.out.println("ODD");
+                        }
+                        break;
+
+                    case 2:
+                        boolean b1 = primeTester.testNumber(zahlzumtesten);
+                        if (b1 == true) {
+                            System.out.println("PRIME");
+                        } else {
+                            System.out.println("NON PRIME");
+                        }
+                        break;
+                    case 3:
+                        boolean b2 = palindromeTester.testNumber(zahlzumtesten);
+                        if (b2 == true) {
+                            System.out.println("PALINDROME");
+                        } else {
+                            System.out.println("NON PALINDROME");
+                        }
+                        break;
+                    default:
+                        System.out.println("Vallah Krise");
 
                 }
 
