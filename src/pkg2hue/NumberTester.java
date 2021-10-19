@@ -6,6 +6,7 @@ package pkg2hue;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -49,9 +50,19 @@ public class NumberTester implements NumberTest{
             Scanner sc = new Scanner(new File(filename));
             int testfälle = Integer.parseInt(sc.nextLine());
             System.out.println("Testfälle: " + testfälle);
+            
+            while(sc.hasNext())
+            {
+                String line = sc.nextLine();
+                String[] arr = line.split("\\s");
+                
+            }
+            
         } catch (FileNotFoundException ex) {
             System.out.println("file not found");
         }
+        
+        
     }
 
     @Override
