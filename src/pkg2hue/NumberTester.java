@@ -4,15 +4,28 @@
  */
 package pkg2hue;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author felix
  */
 public class NumberTester implements NumberTest{
     
+    NumberTest oddTester;
+    NumberTest primeTester;
+    NumberTest palindromeTester;
+    
+    String filename;
+    
     public NumberTester(String fileName)
     {
-        
+        this.filename = fileName;
+  
     }
     
     public void setOddEvenTester(NumberTest oddTester)
@@ -32,7 +45,13 @@ public class NumberTester implements NumberTest{
     
     public void testFile()
     {
-        
+        try {
+            Scanner sc = new Scanner(new File(filename));
+            int testfälle = Integer.parseInt(sc.nextLine());
+            System.out.println("Testfälle: " + testfälle);
+        } catch (FileNotFoundException ex) {
+            System.out.println("file not found");
+        }
     }
 
     @Override
