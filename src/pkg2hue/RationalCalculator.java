@@ -25,19 +25,25 @@ public class RationalCalculator extends AbstractCalculator {
     @Override
     public Number substract(Number a, Number b) {
         Number erg = new Number();
+        erg.setA(a.getA() - b.getA());
+        erg.setB(a.getB() - b.getB());
+        return erg;
+    }
+
+    @Override
+    public Number multiply(Number a, Number b) {
+        Number erg = new Number();
         erg.setA(a.getA() * b.getA());
         erg.setB(a.getB() * b.getB());
         return erg;
     }
 
     @Override
-    public Number multiply(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public Number divide(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Number erg = new Number();
+        erg.setA(a.getA() / b.getA());
+        erg.setB(a.getB() / b.getB());
+        return erg;
     }
 
 }
